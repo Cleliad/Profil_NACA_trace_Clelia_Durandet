@@ -58,3 +58,53 @@ def tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c):
     plt.grid()
     plt.legend()
     plt.show()
+
+
+# FONCTION PRINCIPALE
+
+
+def tracer_profil_naca():
+    print('='*100, '\n', "Ce programme te permet de tracer un profil NACA symétrique (4 chiffres)\n", '='*100, '\n')
+    while True:
+        try:
+            nom_profil = str(input("Nom du profil NACA sous le format 'NACA00XX'':\n"))
+            c = int(input('Quelle est la longueur de la corde (en mètres):\n'))
+            nombre_points = int(input('Combien de points souhaites-tu pour le tracé: \n'))
+            distribution = int(input('Quel type de distribution veux-tu: '
+                                     'lineaire (tape 0) ou non uniforme (tape 1): \n'))
+
+# Création du tableau de valeurs de x_c selon la distribution choisie
+
+            if distribution == 1:  # non uniforme (transformée de Glauert)
+                theta = np.linspace(0, pi, nombre_points)
+                x_c = [0.5 * (1 - math.cos(angle)) for angle in theta]
+            else:  # linéaire
+                x_c = np.linspace(0, 1, nombre_points)
+
+            deux_derniers_chiffres = int(nom_profil[-2:])
+            t = deux_derniers_chiffres / 100
+            break
+        except ValueError:
+            print("Une des entrées est invalide. Veuillez essayer de nouveau.")
+
+# Création des tableaux numpy des coordonnées des courbes extrados et intrados
+
+    tableau_up = creer_tableau_profil_extrados(x_c, c, t)
+    tableau_down = creer_tableau_profil_intrados(x_c, c, t)
+
+# Affichage utilisateur
+    print('=' * 35, 'Données', '=' * 35, '\n')
+    print('Epaisseur maximale du profil: ', t, '\n')
+    position_epaisseur_max = np.argmax(tableau_up[:, 1])
+    index_position_corde = tableau_up[position_epaisseur_max, 0]
+    print("Position de l'épaisseur maximale sur la corde:", (index_position_corde/c)*100, '% de la corde')
+    print('=' * 80)
+
+# Génération du tracé du profil complet à partir des tables de données
+
+    tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c)
+
+
+# Appel de la fonction principale
+
+tracer_profil_naca()
