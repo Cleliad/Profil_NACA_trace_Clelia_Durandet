@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c51287-d6dd-445f-adbb-097dd166e682" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="45c51287-d6dd-445f-adbb-097dd166e682" name="Changes" comment="Modification affichage graphique, mise à l'échelle">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profil_NACA_trace.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA_trace.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,28 +23,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Cleliad/Profil_NACA_trace_Clelia_Durandet.git",
-    "accountId": "5b24cb1a-e22c-4343-9410-7a870d6421d8"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Cleliad&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Cleliad/Profil_NACA_trace_Clelia_Durandet.git&quot;,
+    &quot;accountId&quot;: &quot;5b24cb1a-e22c-4343-9410-7a870d6421d8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hEukdNtyy2XxjrM8TBuo0qxhyJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Profil_NACA_trace.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Profil_NACA_trace.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Clélia/Desktop/COURS ETS/Session E24/MGA802/Pycharm/Profil_NACA_devoir&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -58,6 +68,45 @@
       <option name="presentableId" value="Default" />
       <updated>1717171701686</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ajout fonction 2: tracé du profil avec matplotlib">
+      <option name="closed" value="true" />
+      <created>1717172149714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717172149714</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ajout fonction 2: tracé du profil avec matplotlib">
+      <option name="closed" value="true" />
+      <created>1717172168339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717172168339</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fonction principale et affichage console">
+      <option name="closed" value="true" />
+      <created>1717172258316</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717172258316</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modification affichage graphique, mise à l'échelle">
+      <option name="closed" value="true" />
+      <created>1717529961048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717529961048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajout fonction 2: tracé du profil avec matplotlib" />
+    <MESSAGE value="Fonction principale et affichage console" />
+    <MESSAGE value="Modification affichage graphique, mise à l'échelle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification affichage graphique, mise à l'échelle" />
   </component>
 </project>

@@ -37,7 +37,7 @@ def creer_tableau_profil_intrados(x_c, c, t):
 # FONCTION 2: tracé du profil NACA donné
 
 
-def tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c):
+def tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c, choix, index_position_corde):
     plt.rcParams['font.size'] = 12
     plt.rcParams['figure.autolayout'] = True
     plt.rcParams['figure.dpi'] = 125
@@ -48,13 +48,17 @@ def tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c):
     x_intrados = [((tableau_down[i][0])/c)*100 for i in range(len(x_c))]
     y_intrados = [((tableau_down[i][1])/c)*100 for i in range(len(x_c))]
 
+    x_epaisseur = [(index_position_corde/c)*100 for i in range(100)]
+    y= np.linspace(-100,100,100)
+
     plt.plot(x_extrados, y_extrados, color='blue', label='extrados', linestyle='dashed')
     plt.plot(x_intrados, y_intrados, color='magenta', label='intrados', linestyle='dashed')
+    plt.plot(x_epaisseur,y, color='red', label='épaisseur maximale')
 
     affichage = str(deux_derniers_chiffres)  # pour écrire le nom du profil dans le titre du graphique
     plt.xlabel('% corde')
     plt.ylabel('axe vertical y (% corde)')
-    plt.title('Graphique du profil NACA00' + affichage)
+    plt.title('Graphique du profil NACA00' + affichage + ' ' + '(' + choix + ')')
     plt.axis((0., 100., -100., 100.))  # échelle des axes
     plt.grid()
     plt.legend()
@@ -71,7 +75,7 @@ def tracer_profil_naca():
     print('='*100, '\n', "Ce programme te permet de tracer un profil NACA symétrique (4 chiffres)\n", '='*100, '\n')
     while True:
         try:
-            nom_profil = str(input("Nom du profil NACA sous le format 'NACA00XX'':\n"))
+            nom_profil = str(input("Nom du profil NACA sous le format 'NACA00XX':\n"))
             c = int(input('Quelle est la longueur de la corde (en mètres):\n'))
             nombre_points = int(input('Combien de points souhaites-tu pour le tracé: \n'))
             distribution = int(input('Quel type de distribution veux-tu: '
@@ -82,8 +86,10 @@ def tracer_profil_naca():
             if distribution == 1:  # non uniforme (transformée de Glauert)
                 theta = np.linspace(0, pi, nombre_points)
                 x_c = [0.5 * (1 - math.cos(angle)) for angle in theta]
+                choix='non uniforme'
             else:  # linéaire
                 x_c = np.linspace(0, 1, nombre_points)
+                choix= 'linéaire'
 
             deux_derniers_chiffres = int(nom_profil[-2:])
             t = deux_derniers_chiffres / 100
@@ -106,7 +112,7 @@ def tracer_profil_naca():
 
 # Génération du tracé du profil complet à partir des tables de données
 
-    tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c)
+    tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c, choix, index_position_corde)
 
 
 # Appel de la fonction principale
