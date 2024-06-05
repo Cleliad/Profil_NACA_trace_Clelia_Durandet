@@ -48,12 +48,12 @@ def tracer_graphique(tableau_up, tableau_down, x_c, deux_derniers_chiffres, c, c
     x_intrados = [((tableau_down[i][0])/c)*100 for i in range(len(x_c))]
     y_intrados = [((tableau_down[i][1])/c)*100 for i in range(len(x_c))]
 
-    x_epaisseur = [(index_position_corde/c)*100 for i in range(100)]
-    y= np.linspace(-100,100,100)
+    x_epaisseur = np.ones((100, 1))*(index_position_corde/c)*100
+    y_epaisseur = np.linspace(-100, 100, 100)
 
     plt.plot(x_extrados, y_extrados, color='blue', label='extrados', linestyle='dashed')
     plt.plot(x_intrados, y_intrados, color='magenta', label='intrados', linestyle='dashed')
-    plt.plot(x_epaisseur,y, color='red', label='épaisseur maximale')
+    plt.plot(x_epaisseur, y_epaisseur, color='red', label='épaisseur maximale')
 
     affichage = str(deux_derniers_chiffres)  # pour écrire le nom du profil dans le titre du graphique
     plt.xlabel('% corde')
@@ -86,10 +86,10 @@ def tracer_profil_naca():
             if distribution == 1:  # non uniforme (transformée de Glauert)
                 theta = np.linspace(0, pi, nombre_points)
                 x_c = [0.5 * (1 - math.cos(angle)) for angle in theta]
-                choix='non uniforme'
+                choix = 'non uniforme'
             else:  # linéaire
                 x_c = np.linspace(0, 1, nombre_points)
-                choix= 'linéaire'
+                choix = 'linéaire'
 
             deux_derniers_chiffres = int(nom_profil[-2:])
             t = deux_derniers_chiffres / 100

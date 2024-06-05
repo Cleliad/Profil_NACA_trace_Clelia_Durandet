@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c51287-d6dd-445f-adbb-097dd166e682" name="Changes" comment="Modification affichage graphique, mise à l'échelle">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="45c51287-d6dd-445f-adbb-097dd166e682" name="Changes" comment="Ajout légende épaisseur maximale">
       <change beforePath="$PROJECT_DIR$/Profil_NACA_trace.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profil_NACA_trace.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,13 +99,22 @@
       <option name="project" value="LOCAL" />
       <updated>1717529961048</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout légende épaisseur maximale">
+      <option name="closed" value="true" />
+      <created>1717553336709</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717553336709</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout fonction 2: tracé du profil avec matplotlib" />
     <MESSAGE value="Fonction principale et affichage console" />
     <MESSAGE value="Modification affichage graphique, mise à l'échelle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification affichage graphique, mise à l'échelle" />
+    <MESSAGE value="Ajout légende épaisseur maximale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout légende épaisseur maximale" />
   </component>
 </project>
